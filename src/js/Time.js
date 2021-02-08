@@ -58,8 +58,4 @@ for (let i = 0; i < 4; i++) {
 
 circles.forEach((item, i) => (i == 0 || i == 2) ? item.classList.add('top') : item.classList.add('bottom'));
 
-document.querySelector('.hours').append(circles[0]);
-document.querySelector('.hours').append(circles[1]);
-document.querySelector('.minutes').append(circles[2]);
-document.querySelector('.minutes').append(circles[3]);
-console.log(circles);
+circles.forEach((item, i) => (i == 0 || i == 1) ? document.querySelector('.hours').append(item) : document.querySelector('.minutes').append(item));
