@@ -1,0 +1,77 @@
+$cell-width: 60px;
+$cell-height: 90px;
+$cell-margin: 10px;
+$border-width: 2px;
+$column-gap: 12px;
+$column-gap-big: 12px;
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(22, 22, 22);
+    .time {
+        color: rgb(16, 163, 231);
+        text-align: center;
+        margin: 100px 0 50px;
+    }
+    .time-block {
+        display: flex;
+        width: $cell-width * 6 + $cell-margin * 6 + $border-width * 12 + $column-gap * 3 + $column-gap-big * 2; 
+        margin: 0 auto;
+        column-gap: $column-gap-big;
+        .big_cell {
+            position: relative;
+            display: flex;
+            margin: 0 $cell-margin;
+            column-gap: $column-gap;
+            .cell {
+                width: $cell-width;
+                height: $cell-height;
+                background-color: rgb(9, 11, 12);
+                color:rgb(16, 163, 231);
+                font-size: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 15px;
+                border: $border-width solid rgb(16, 163, 231);
+            }
+            
+        }
+    }
+}
+
+.circle {
+    position: absolute;
+    right: -20px;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(16, 163, 231);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    // transition: all .1s ease-out .1s;
+    // -webkit-transition: all .1s ease-out .1s;
+    // -moz-transition: all .1s ease-out .1s;
+    // -ms-transition: all .1s ease-out .1s;
+    // -o-transition: all .1s ease-out .1s;
+}
+.top {
+    top: 28px;
+}
+.bottom {
+    top: 50px;
+}
+
+.hidden {
+    background-color: rgb(4, 45, 65);
+    // transition: all .1s ease-out .1s;
+    // -webkit-transition: all .1s ease-out .1s;
+    // -moz-transition: all .1s ease-out .1s;
+    // -ms-transition: all .1s ease-out .1s;
+    // -o-transition: all .1s ease-out .1s;
+}
+
